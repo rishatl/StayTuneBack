@@ -33,4 +33,9 @@ public class ConcertsController {
     public ResponseEntity<List<ConcertDto>> getListConcerts() {
         return new ResponseEntity(concertService.getAllConcerts(), HttpStatus.OK);
     }
+
+    @GetMapping("/create")
+    public ResponseEntity<Void> createConcerts() {
+        return new ResponseEntity(concertService.createConcerts(), HttpStatus.OK);
+    }
 }

@@ -58,6 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST,"/signUp").permitAll()
                 .antMatchers(HttpMethod.POST,"/signIn").permitAll()
                 .antMatchers(HttpMethod.GET, "/image/*").permitAll()
+                .antMatchers(HttpMethod.GET, "/create").permitAll()
                 .antMatchers("/admin/*").hasAuthority("ADMIN")
                 .antMatchers("/organizer/*").hasAuthority("ORGANIZER")
                 .antMatchers("/concert/*").hasAnyAuthority("USER", "ADMIN", "ORGANIZER")

@@ -16,4 +16,6 @@ public interface ConcertService {
     AnotherConcertDto addNewConcert(ConcertDto concertDto);
 
     ConcertDto getConcertByConcertId(Long concertId);
+
+    Void createConcerts();
 }
